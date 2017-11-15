@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "stop": "kill `cat pid`",
-    "restart": "npm run stop ; npm start",
+    "restart": "npm run stop ; npm start"
   },
   "author": "",
   "license": "ISC",
