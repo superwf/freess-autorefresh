@@ -16,6 +16,7 @@ log4js.configure({
 })
 
 const configPath = path.join(__dirname, 'config.json')
+const pidPath = path.join(__dirname, 'pid')
 
 const log = console.log
 
@@ -68,6 +69,7 @@ function run() {
       log(chalk.red(err))
       logger.debug(String(err))
     })
+  fs.writeFile(pidPath, process.pid)
 
   // 3 hours restart
   setTimeout(() => {
