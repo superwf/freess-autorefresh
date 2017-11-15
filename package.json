@@ -1,0 +1,21 @@
+{
+  "name": "freess-autorefresh",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "free-shadowsocks": "^1.0.4",
+    "log4js": "^2.3.12",
+    "proxy-agent": "^2.1.0",
+    "request": "^2.83.0",
+    "socks5-client": "^1.2.5",
+    "socks5-node-fetch": "0.0.4",
+    "tcp-proxy": "0.0.1"
+  }
+}
