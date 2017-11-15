@@ -76,4 +76,16 @@ function run() {
   }, 1000 * 60 * 60 * 3)
 }
 
+function killss() {
+  if (ss) {
+    ss.kill()
+  }
+  process.exit()
+}
+
+process.on('SIGINT', killss)
+process.on('exit', killss)
+process.on('SIGUSER1', killss)
+process.on('uncaughtException', killss)
+
 run()
