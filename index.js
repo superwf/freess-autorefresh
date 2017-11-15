@@ -69,7 +69,7 @@ function run() {
       log(chalk.red(err))
       logger.debug(String(err))
     })
-  fs.writeFile(pidPath, process.pid)
+  fs.writeFile(pidPath, process.pid, log)
 
   // 3 hours restart
   setTimeout(() => {
