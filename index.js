@@ -37,7 +37,7 @@ function writeConfig() {
   log(chalk.green("start read from ishadowx"));
   return freeShadowsocks().then(servers => {
     // use second server
-    const server = servers[1];
+    const server = servers[8];
     log(chalk.cyan("user server config", server));
     return readConfig().then(config => {
       Object.assign(config, server);
@@ -71,7 +71,7 @@ function run() {
     });
   fs.writeFile(pidPath, process.pid, log);
 
-  // 1 hours restart
+  // 1 hour restart
   setTimeout(() => {
     ss.kill();
     run();
