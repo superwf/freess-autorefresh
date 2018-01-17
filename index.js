@@ -86,6 +86,7 @@ function killss() {
 }
 
 process.on("SIGINT", killss);
+process.on("SIGTERM", killss);
 process.on("exit", killss);
 process.on("SIGUSER1", killss);
 process.on("uncaughtException", killss);
